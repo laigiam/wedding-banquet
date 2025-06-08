@@ -73,7 +73,7 @@
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <li><a href="#intro">How we met</a></li>
+                            <li><a href="#intro">Our Story</a></li>
                             <li><a href="#events">Events</a></li>
                             <li><a href="#instagram">instagram</a></li>
                             <li><a href="#eng-pics">Engagement</a></li>
@@ -130,12 +130,12 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header">How we met</h3>
+                <h3 class="header">Our Story</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/IMG_2317.jpg" class="wp1"></div>
-            <div class="col-md-6">
+            <!--<div class="col-md-3 hidden-sm hidden-xs"><img src="img/marina-barrage.jpg" class="wp1"></div>-->
+            <div class="col-md-12">
                 <p>
                     [PLACEHOLDER - from our insta post directly hahaha] Throwback to the surprise engagement -
                      she said yes to a lifetime of sunsets... in the pouring rain 💍 
@@ -144,12 +144,28 @@
                     💙 with better weather this time! 🌅
                 </p>
             </div>
-            <div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.jpg" class="wp2"></div>
+            <!--<div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.jpg" class="wp2"></div>-->
         </div>
         <div class="row">
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/IMG_2317.jpg" class="wp8"></div>
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/DSD_0214.jpg" class="wp9"></div>
+             <div class="col-md-6">
+                <a class="fancybox" rel="group" href="img/marina-barrage.jpg">
+                    <div class="img-wrap fade-left">
+                        <img src="img/marina-barrage.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+             <div class="col-md-6">
+                <a class="fancybox" rel="group" href="img/sentosa.jpg">
+                    <div class="img-wrap fade-right">
+                        <img src="img/sentosa.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>                       
         </div>
+        <!--<div class="row">
+            <div class="col-xs-12 col-sm-push-2 col-xs-12 hidden-md hidden-lg"><img src="img/marina-barrage.jpg" class="wp10"></div>
+            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/DSD_0214.jpg" class="wp9"></div>
+        </div> -->
     </div>
 </section>
 
@@ -524,5 +540,26 @@
     ga('create', 'UA-46465113-4', 'auto');
     ga('send', 'pageview');
 </script>
+
+<!--Scroll Animation-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const elements = document.querySelectorAll('.fade-left, .fade-right');
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          obs.unobserve(entry.target); // Animate only once
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    elements.forEach(el => observer.observe(el));
+  });
+</script>
+
 </body>
 </html>
