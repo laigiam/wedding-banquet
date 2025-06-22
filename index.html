@@ -73,7 +73,7 @@
                 <div class="header-nav">
                     <nav>
                         <ul class="primary-nav">
-                            <li><a href="#intro">Our Story</a></li>
+                            <li><a href="#beginnings">Our Story</a></li>
                             <li><a href="#eng-pics">Gallery</a></li>
                             <li><a href="#faq">Q&A</a></li>
                         </ul>
@@ -105,7 +105,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <!--<h3>We are getting hitched</h3>-->
                 <p>Thank you for celebrating this joyous occasion with us!</p>
             </div>
         </div>
@@ -129,51 +128,75 @@
     </div>
 </section>
 
-<section id="intro">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 class="header">The Early Days</h3>
-            </div>
-    <div class="early-days-row">
-        <div class="early-image fade-left">
-            <img src="img/dating-1.jpg" alt="Dating 1">
-        </div>
-        <div class="early-image fade-right">
-            <img src="img/dating-2.jpg" alt="Dating 2">
-        </div>
+
+<!-- Timeline Navigation 
+<div class="sunset-timeline-wrapper">
+  <div class="timeline-bar">
+    <div class="timeline-item active" data-index="0">
+      <div class="timeline-label">The Early Days</div>
+      <div class="timeline-dot"></div>
+    </div>
+    <div class="timeline-item" data-index="1">
+      <div class="timeline-label">Over the Years</div>
+      <div class="timeline-dot"></div>
+    </div>
+    <div class="timeline-item" data-index="2">
+      <div class="timeline-label">The Story Continues...</div>
+      <div class="timeline-dot"></div>
+    </div>
+    <div class="timeline-line"></div>
+    <div class="timeline-extension"></div>
+  </div>
+</div>
+-->
+<!-- Slideshow Area
+<div class="aspect-ratio-box proposal-wrapper" id="sunset-wrapper">
+  <img id="sunset-slide-a" class="fade-image active" src="img/sunset-1.jpg" alt="Sunset 1">
+  <img id="sunset-slide-b" class="fade-image" src="img/sunset-2.jpg" alt="Sunset 2">
+</div>
+
+-->
+
+<section class="events section-padding" id="beginnings" style="background-color: #fff;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h3 class="header">Our Story</h3>
+      </div>
     </div>
 
-        <div class="row">
-            <!--<div class="col-md-3 hidden-sm hidden-xs"><img src="img/marina-barrage.jpg" class="wp1"></div>-->
-            <div class="col-md-12 caption-space">
-                <p>
-                    Running away from problems without a care in the world!
-                </p>
-            </div>
-            <!--<div class="col-md-3 hidden-sm hidden-xs"><img src="img/DSD_0214.jpg" class="wp2"></div>-->
-        </div>
+    <div class="proposal-block text-center fade-down">
+      <div class="aspect-ratio-box proposal-wrapper">
+        <img src="img/beginnings.jpg" alt="Track" class="fade-image active" style="object-fit: cover; border-radius: 10px;">
+      </div>
+    </div>
 
-    </div>
-    <div class="container">
-        <div class="row hidden-lg hidden-md hidden-xs">
-            <div class="col-xs-12 section-border section-padding"></div>
-        </div>
-    </div>
+    <p class="caption-space">
+      Back to where our story began!
+    </p>
+  </div>
 </section>
 
 <section class="events section-padding" id="events">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header">The Proposal</h3>
+                <h3 class="header">The Engagement</h3>
             </div>
         </div>
 
         <div class="proposal-block text-center fade-down">
-            <div class="aspect-ratio-box">
-                <img id="proposal-slide-a" src="img/Proposal-1.jpg" alt="Proposal A" class="fade-image active">
-                <img id="proposal-slide-b" src="img/Proposal-2.jpg" alt="Proposal B" class="fade-image">
+<div class="aspect-ratio-box proposal-wrapper">
+  <img id="proposal-slide-a" class="fade-image active" src="img/Proposal-1.jpg" alt="Proposal A">
+  <img id="proposal-slide-b" class="fade-image" src="img/Proposal-2.jpg" alt="Proposal B">
+
+  <div class="proposal-dots-overlay">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+  </div>
+</div>
+
             </div>
 
         <p class="caption-space">
@@ -190,7 +213,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h3 class="header">Pre-Wedding Gallery</h3>
+                <h3 class="header">Chasing Sunsets Over the Years</h3>
             </div>
 
     <!-- Fade mask wrapper -->
@@ -314,7 +337,7 @@
     </div>
 </section>-->
 
-<section id="map" class="section-padding">
+<section id="map" class="section-padding" style="background-color: #f8f9fd;">
   <div class="text-center">
     <h3>How do I get there?</h3>
     <p>It's way easier than you think!</p>
@@ -370,106 +393,88 @@
 
 
 <section class="rsvp text-center" id="rsvp">
+  <div class="container">
+    <div class="row rsvp-flex-wrap">
+      
+      <!-- RSVP Form -->
+      <div class="rsvp-form-col col-md-6 text-left">
+        <h3>What are you waiting for?</h3>
+        <p>Please fill in your details below</p>
 
-    <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                    </button>
-                    <div class="section-padding">
-                        <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
-                        <div id="add-to-cal"></div>
-                    </div>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-                <h3>What are you waiting for?</h3>
-                <p>We would greatly appreciate if you could RSVP before 27<sup>th</sup> August 2025</p>
-                <form id="rsvp-form" class="rsvp-form"
-                      action=""
-                      method="POST">
-
-
-<div class="row">
-  <!-- First Name -->
-  <div class="col-md-6 col-sm-6">
-    <div class="form-input-group">
-      <i class="fa fa-user"></i>
-      <input type="text" name="first-name" placeholder="First name" required>
-    </div>
-  </div>
-
-  <!-- Last Name -->
-  <div class="col-md-6 col-sm-6">
-    <div class="form-input-group">
-      <i class="fa fa-user"></i>
-      <input type="text" name="last-name" placeholder="Last name" required>
-    </div>
-  </div>
-
-  <!-- Contact -->
-  <div class="col-md-6 col-sm-6">
-    <div class="form-input-group">
-      <i class="fa fa-phone"></i>
-      <input type="tel" id="contact" name="contact" placeholder="Contact number" pattern="[689]\d{7}" maxlength="8" required>
-    </div>
-  </div>
-
-  <!-- Dietary -->
-  <div class="col-md-6 col-sm-6">
-    <div class="form-input-group">
-      <i class="fa fa-cutlery"></i>
-      <select id="dietary" name="dietary" required>
-        <option value="" disabled selected>Dietary requirements</option>
-        <option value="none">None</option>
-        <option value="vegetarian">Vegetarian</option>
-        <option value="halal">Halal</option>
-        <option value="other">Other (please specify)</option>
-      </select>
-    </div>
-  </div>
-
-  <!-- Specify dietary -->
-  <div class="col-md-12" id="other-dietary-col" style="display: none;">
-    <div class="form-input-group">
-      <i class="fa fa-pencil"></i>
-      <input type="text" id="other-dietary" name="other-dietary" placeholder="Please specify dietary needs">
-    </div>
-  </div>
-
-  <!-- Well Wishes -->
-  <div class="col-md-12">
-    <div class="form-input-group">
-      <i class="fa fa-heart"></i>
-      <input type="text" name="wishes" placeholder="Well wishes for us! (optional)">
-    </div>
-  </div>
-
-  <!-- Buttons -->
-  <div class="col-md-6 col-sm-6">
-    <button class="btn-fill rsvp-btn" type="submit" name="response" value="accept">Joyfully Accept</button>
-  </div>
-  <div class="col-md-6 col-sm-6">
-    <button class="btn btn-white rsvp-btn" type="submit" name="response" value="decline">Regretfully Decline</button>
-  </div>
-</div>
-
-
-                        
-
-
-                </form>
+        <form id="rsvp-form" class="rsvp-form" method="POST">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <div class="form-input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" name="first-name" placeholder="First name" required>
+              </div>
             </div>
+
+            <div class="col-md-6 col-12">
+              <div class="form-input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" name="last-name" placeholder="Last name" required>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+              <div class="form-input-group">
+                <i class="fa fa-phone"></i>
+                <input type="tel" name="contact" placeholder="Contact number" pattern="[689]\d{7}" maxlength="8" required>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+              <div class="form-input-group">
+                <i class="fa fa-cutlery"></i>
+                <select id="dietary" name="dietary" required>
+                  <option value="" disabled selected>Dietary requirements</option>
+                  <option value="none">No Requirements</option>
+                  <option value="vegetarian">Vegetarian</option>
+                  <option value="halal">Halal</option>
+                  <option value="other">Other (please specify)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-md-12 col-12" id="other-dietary-col" style="display: none;">
+              <div class="form-input-group">
+                <i class="fa fa-pencil"></i>
+                <input type="text" id="other-dietary" name="other-dietary" placeholder="Please specify dietary needs">
+              </div>
+            </div>
+
+            <div class="col-md-12 col-12">
+              <div class="form-input-group">
+                <i class="fa fa-heart"></i>
+                <input type="text" name="wishes" placeholder="Well wishes for us! (optional)">
+              </div>
+            </div>
+
+            <div class="col-md-6 col-12">
+              <button class="btn-fill rsvp-btn" type="submit" name="response" value="accept">Joyfully Accept</button>
+            </div>
+            <div class="col-md-6 col-12 mt-md-0 mt-3">
+              <button class="btn-outline-sky rsvp-btn" type="submit" name="response" value="decline">Regretfully Decline</button>
+            </div>
+
+            <div class="col-md-12" id="alert-wrapper"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Slideshow -->
+      <div class="rsvp-image-col col-md-6 text-center">
+        <div class="rsvp-slideshow-wrapper">
+          <img id="rsvp-slide-a" class="rsvp-slide active" src="img/run-1.jpg" alt="Run 1">
+          <img id="rsvp-slide-b" class="rsvp-slide" src="img/run-2.jpg" alt="Run 2">
         </div>
+        <p class="rsvp-caption">See you there! 🏃🏻‍♂️🏃‍♀️</p>
+      </div>
     </div>
+  </div>
 </section>
+
 
 
 <section id="faq" class="section-padding" style="background-color: #f7f8fc;">
@@ -501,8 +506,6 @@
     </div>
   </div>
 </section>
-
-
 
 
 
@@ -686,12 +689,14 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     let index = 0;
     let showingA = true;
+    let timer;
 
     const imgA = document.getElementById("proposal-slide-a");
     const imgB = document.getElementById("proposal-slide-b");
+    const dots = document.querySelectorAll(".proposal-dots-overlay .dot");
 
-    setInterval(() => {
-      index = (index + 1) % images.length;
+    function showImage(newIndex) {
+      index = newIndex;
       const nextImg = images[index];
 
       if (showingA) {
@@ -705,9 +710,96 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       showingA = !showingA;
-    }, 7000); // 7 seconds per image
+
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+
+      // Restart timer
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        showImage((index + 1) % images.length);
+      }, 7000);
+    }
+
+    // Initial start
+    timer = setTimeout(() => {
+      showImage((index + 1) % images.length);
+    }, 7000);
+
+    // Dot click event
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        showImage(parseInt(dot.dataset.index));
+      });
+    });
   });
 </script>
+
+
+
+<!--Proposal Controls-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const images = [
+      "img/Proposal-1.jpg",
+      "img/Proposal-2.jpg",
+      "img/Proposal-3.jpg"
+    ];
+    let index = 0;
+    let showingA = true;
+    let timer;
+
+    const imgA = document.getElementById("proposal-slide-a");
+    const imgB = document.getElementById("proposal-slide-b");
+    const dots = document.querySelectorAll(".proposal-dots-overlay .dot");
+
+    function scheduleNext() {
+      timer = setTimeout(() => {
+        showImage((index + 1) % images.length);
+      }, 7000);
+    }
+
+    function showImage(newIndex) {
+      index = newIndex;
+      const nextImg = images[index];
+
+      if (showingA) {
+        imgB.src = nextImg;
+        imgB.classList.add("active");
+        imgA.classList.remove("active");
+      } else {
+        imgA.src = nextImg;
+        imgA.classList.add("active");
+        imgB.classList.remove("active");
+      }
+
+      showingA = !showingA;
+
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[index].classList.add("active");
+
+      // Reset timer
+      clearTimeout(timer);
+      scheduleNext();
+    }
+
+    // Start auto slideshow
+    scheduleNext();
+
+    // Manual dot click
+    dots.forEach(dot => {
+      dot.addEventListener("click", () => {
+        const newIndex = parseInt(dot.dataset.index);
+        if (newIndex !== index) {
+          showImage(newIndex);
+        }
+      });
+    });
+  });
+</script>
+
+
+
 
 <!--Map Box-->
 <script>
@@ -757,6 +849,108 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 </script>
+
+
+<!--Over the Years Timeline-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const images = [
+    "img/sunset-1.jpg",
+    "img/sunset-2.jpg",
+    "img/sunset-3.jpg"
+  ];
+
+  let index = 0;
+  let showingA = true;
+  let timer;
+
+  const imgA = document.getElementById("sunset-slide-a");
+  const imgB = document.getElementById("sunset-slide-b");
+  const timelineItems = document.querySelectorAll(".timeline-item");
+
+  function updateTimeline(indexToShow) {
+    timelineItems.forEach((item, i) => {
+      item.classList.toggle("active", i === indexToShow);
+    });
+  }
+
+  function showImage(newIndex) {
+    index = newIndex;
+    const nextSrc = images[index];
+
+    if (showingA) {
+      imgB.src = nextSrc;
+      imgB.classList.add("active");
+      imgA.classList.remove("active");
+    } else {
+      imgA.src = nextSrc;
+      imgA.classList.add("active");
+      imgB.classList.remove("active");
+    }
+
+    showingA = !showingA;
+    updateTimeline(index);
+
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      showImage((index + 1) % images.length);
+    }, 7000);
+  }
+
+  timelineItems.forEach((item, i) => {
+    item.addEventListener("click", () => {
+      showImage(i);
+    });
+  });
+
+  timer = setTimeout(() => {
+    showImage(1);
+  }, 7000);
+});
+</script>
+
+
+<!--Running GIF-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+const images = [
+  "img/run-1.jpg",
+  "img/run-2.jpg",
+  "img/run-3.jpg",
+  "img/run-4.jpg"
+];
+
+
+    let index = 0;
+    let showingA = true;
+
+    const imgA = document.getElementById("rsvp-slide-a");
+    const imgB = document.getElementById("rsvp-slide-b");
+    const caption = document.getElementById("rsvp-caption");
+
+function showNextImage() {
+  index = (index + 1) % images.length;
+  const nextSrc = images[index];
+
+  if (showingA) {
+    imgB.src = nextSrc;
+    imgB.classList.add("active");
+    imgA.classList.remove("active");
+  } else {
+    imgA.src = nextSrc;
+    imgA.classList.add("active");
+    imgB.classList.remove("active");
+  }
+
+  caption.textContent = "See you there! 🏃🏻‍♂️🏃‍♀️"; // Fixed caption
+  showingA = !showingA;
+}
+
+
+    setInterval(showNextImage, 300); // 0.3s switch
+  });
+</script>
+
 
 
 

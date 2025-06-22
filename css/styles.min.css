@@ -348,7 +348,7 @@
 }
 
 #dietary {
-  color: #aaa; /* Default gray text */
+  color: #000; /* Default gray text */
 }
 
 #dietary option {
@@ -570,3 +570,297 @@
   line-height: 26px;
 }
 
+@media (max-width: 575.98px) {
+  .rsvp .rsvp-form .col-md-6 {
+    margin-bottom: 10px;
+  }
+}
+
+.form-input-group i.fa-heart {
+  color: #42d7f5;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+
+.form-input-group input,
+.form-input-group select,
+.form-input-group textarea {
+  color: #000 !important;
+}
+
+#dietary:invalid {
+  color: #bbb;
+}
+
+.btn-outline-sky {
+  color: #42d7f5;
+  background-color: transparent;
+  border: 2px solid #42d7f5;
+  border-radius: 40px;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  display: inline-block;
+  width: 100%;
+}
+
+.btn-outline-sky:hover,
+.btn-outline-sky:focus {
+  background-color: #42d7f5;
+  color: #fff;
+  border-color: #42d7f5;
+}
+
+@media (max-width: 767.98px) {
+  #rsvp-form .col-12 + .col-12 {
+    margin-top: 10px !important;
+  }
+}
+
+.proposal-dots {
+  text-align: center;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.proposal-block:hover .proposal-dots {
+  opacity: 1;
+}
+
+.proposal-dots .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.proposal-dots .dot.active,
+.proposal-dots .dot:hover {
+  background-color: #42d7f5;
+}
+
+.proposal-wrapper {
+  position: relative;
+}
+
+.proposal-dots-overlay {
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 5;
+}
+
+.proposal-wrapper:hover .proposal-dots-overlay {
+  opacity: 1;
+}
+
+.proposal-dots-overlay .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 6px;
+  background-color: #d3d3d3;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.proposal-dots-overlay .dot.active,
+.proposal-dots-overlay .dot:hover {
+  background-color: #42d7f5;
+  transform: scale(1.15);
+}
+
+.sunset-timeline-wrapper {
+  position: relative;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.timeline-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timeline-item {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #bbb;
+  margin-bottom: 8px;
+}
+
+.timeline-item.active .timeline-label {
+  color: #000;
+  font-weight: 700;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 4px solid #87ceeb;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.timeline-item.active .timeline-dot {
+  background-color: #87ceeb;
+}
+
+/* solid blue line */
+.timeline-line {
+  position: absolute;
+  top: 38px;
+  left: 8px;
+  right: 40px; /* reserve space for dotted extension */
+  height: 4px;
+  background-color: #87ceeb;
+  z-index: 1;
+}
+
+/* dotted line extension */
+.timeline-extension {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  width: 30px;
+  height: 4px;
+  border-bottom: 4px dotted #87ceeb;
+  z-index: 1;
+}
+
+.rsvp {
+  margin-top: 60px;
+  padding-bottom: 140px;
+  background-color: #fff;
+}
+
+.rsvp-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start; /* top-align form and image */
+}
+
+/* RSVP form column */
+.rsvp-form-col {
+  flex: 1 1 50%;
+  padding-right: 30px;
+}
+
+/* RSVP image column */
+.rsvp-image-col {
+  flex: 1 1 50%;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Keep square image */
+.rsvp-slideshow-wrapper {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Slide images cropped to fill square */
+.rsvp-slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px;
+}
+
+.rsvp-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Caption below image */
+.rsvp-caption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #3d4351;
+  text-align: center;
+}
+
+/* Force stacking for narrow screens */
+@media (max-width: 991.98px) {
+  .rsvp-flex-wrap {
+    flex-direction: column;
+  }
+
+  .rsvp-form-col,
+  .rsvp-image-col {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .rsvp-image-col {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rsvp-slideshow-wrapper {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 0 auto; /* 🔧 Center horizontally */
+  }
+
+  .rsvp-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .rsvp-caption {
+    margin-top: 16px;
+    text-align: center;
+  }
+}
+
+.rsvp-form-col h3,
+.rsvp-form-col p {
+  text-align: center;
+}

@@ -364,3 +364,11 @@
         padding-top: 20px;
     }
 }
+
+.caption-space {
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 26px;
+  color: rgba(28, 54, 83, 0.7);
+  text-align: center; /* ✅ Center the caption */
+}
