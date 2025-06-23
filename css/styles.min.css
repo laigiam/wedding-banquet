@@ -864,3 +864,29 @@
 .rsvp-form-col p {
   text-align: center;
 }
+
+.event-details {
+  margin: 20px auto;
+  max-width: 500px;
+  color: #3d4351;
+}
+
+.venue-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #808080;
+  letter-spacing: 1px;
+}
+
+.venue-location {
+  font-size: 16px;
+  color: rgba(28, 54, 83, 0.6);
+  margin-bottom: 10px;
+}
+
+.event-time {
+  font-size: 15px;
+  color: #3d4351;
+  font-weight: 500;
+}
