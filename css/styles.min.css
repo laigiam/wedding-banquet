@@ -146,6 +146,7 @@
   width: 100%;
   min-height: 1px;
   scrollbar-width: none;
+  margin-bottom: 20px;
 }
 
 .carousel-wrapper::-webkit-scrollbar {
@@ -161,22 +162,38 @@
   min-width: 100vw; /* ensures scrolling even if few items */
 }
 
-/* 🖼️ Carousel items */
 .carousel-item {
-  flex: 0 0 auto;
-  width: 400px; /* ✅ make image boxes bigger */
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
   border-radius: 10px;
+  flex: 0 0 auto;
   overflow: hidden;
-  min-height: 280px; /* optionally increase height too */
-  background-color: #ffffff;
 }
 
-.carousel-item img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 10px;
+.carousel-item .image-box {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.carousel-item .image-box img {
+  height: 100%;
+  width: auto;
+  max-height: 280px;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+}
+
+
+
+
+
 
 /* ⬅️➡️ Navigation arrows */
 .carousel-arrow {
