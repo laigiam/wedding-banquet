@@ -206,17 +206,19 @@ $(document).ready(function () {
 
     $('#add-to-cal').html(myCalendar);
 
-
     /********************** RSVP **********************/
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
+
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
+        if (false) {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        } else {
             $.post('https://script.google.com/macros/s/AKfycbyZIuibGZvvOgMAPmGdJFpfW3FCa2DOE6h-RCbTy5oEE-By4v2cSdg7zViAIG_UzacC/exec', data)
                 .done(function (data) {
                     console.log(data);
-                    alert(JSON.stringify(data));
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
                     } else {
@@ -228,8 +230,9 @@ $(document).ready(function () {
                     console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
-        
+        }
     });
+
 
 });
 

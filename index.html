@@ -721,21 +721,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
-    const form = document.querySelector(".rsvp-form"); // Adjust selector if needed
+    const form = document.querySelector(".rsvp-form");
     const contactInput = document.getElementById("contact");
+    const alertWrapper = document.getElementById("alert-wrapper");
+
+    let responseValue = null; // Track which button is clicked
+
+    // Track which button was pressed
+    const buttons = form.querySelectorAll("button[type=submit][name=response]");
+    buttons.forEach(button => {
+      button.addEventListener("click", function () {
+        responseValue = this.value === "accept" ? "yes" : "no";
+      });
+    });
 
     form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
       const contactValue = contactInput.value.trim();
       const phonePattern = /^[689]\d{7}$/;
 
       if (!phonePattern.test(contactValue)) {
         alert("Please enter a valid 8-digit Singapore contact number");
         contactInput.focus();
-        e.preventDefault();
+        return;
       }
+
+      alertWrapper.innerHTML = "<p>Saving your details...</p>";
+
+      const formData = new FormData(form);
+      if (responseValue) {
+        formData.set("response", responseValue); // ✅ add "yes"/"no" explicitly
+      }
+
+      const data = {};
+      formData.forEach((value, key) => {
+        data[key] = value;
+      });
+
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyZIuibGZvvOgMAPmGdJFpfW3FCa2DOE6h-RCbTy5oEE-By4v2cSdg7zViAIG_UzacC/exec";
+
+      fetch(scriptURL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: new URLSearchParams(data)
+      })
+        .then(() => {
+          alertWrapper.innerHTML = "<p>Thanks for RSVPing!</p>";
+          form.reset();
+        })
+        .catch(error => {
+          console.error("Error!", error.message);
+          alertWrapper.innerHTML = "<p>Something went wrong. Please try again later.</p>";
+        });
     });
   });
 </script>
+
+
 
 <!--Proposal Slideshow-->
 <!-- Scroll-triggered fade-in -->
@@ -996,7 +1039,11 @@ const images = [
   "img/run-1.jpg",
   "img/run-2.jpg",
   "img/run-3.jpg",
-  "img/run-4.jpg"
+  "img/run-4.jpg",
+  "img/run-5.jpg",
+  "img/run-6.jpg",
+  "img/run-7.jpg",
+  "img/run-8.jpg"
 ];
 
 
@@ -1026,7 +1073,7 @@ function showNextImage() {
 }
 
 
-    setInterval(showNextImage, 300); // 0.3s switch
+    setInterval(showNextImage, 250); // 0.25s switch
   });
 </script>
 
