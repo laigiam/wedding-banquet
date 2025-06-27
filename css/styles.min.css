@@ -194,6 +194,7 @@
 
 
 
+
 /* ⬅️➡️ Navigation arrows */
 .carousel-arrow {
   position: absolute;
@@ -857,7 +858,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 15px;
-    justify-content: left;
+    margin: 0 auto; /* 🔧 Center horizontally */
   }
 
   .rsvp-slide {
