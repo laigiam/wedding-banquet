@@ -192,6 +192,32 @@
 
 
 
+@media (max-width: 767.98px) {
+  /* Shrink carousel contents */
+  .carousel-container {
+    transform: scale(0.7);
+    transform-origin: center;
+    margin: 0 auto;
+  }
+
+  /* Force carousel to stretch full width of screen */
+  .carousel-fade-mask {
+    width: 100vw;
+    margin-left: calc(-1 * ((100vw - 100%) / 2));
+  }
+
+  /* Reduce vertical spacing between carousels */
+  #eng-pics .carousel-fade-mask + .carousel-fade-mask {
+    margin-top: -20px; /* was likely too big before; now tighter */
+  }
+
+  /* Optional: reduce padding for section */
+  #eng-pics .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 
 
 
