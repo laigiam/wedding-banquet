@@ -274,7 +274,7 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_5.jpg">
+                    <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_5.jpg" loading="lazy">
                         <div class="image-box">
                             <picture>
                               <source srcset="img/eng_pics/webp_eng_pic_5.webp" type="image/webp">
@@ -336,59 +336,83 @@
                 <div class="carousel-item">
                     <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_9.jpg">
                         <div class="image-box">
-                                <img src="img/eng_pics/eng_pic_9.jpg" alt="Pre-Wedding 9"/>
+                            <picture>
+                              <source srcset="img/eng_pics/webp_eng_pic_9.webp" type="image/webp">
+                              <img src="img/eng_pics/eng_pic_9.jpg" alt="Pre-Wedding 9" loading="lazy">
+                            </picture>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_10.jpg">
                         <div class="image-box">
-                                <img src="img/eng_pics/eng_pic_10.jpg" alt="Pre-Wedding 10"/>
+                            <picture>
+                              <source srcset="img/eng_pics/webp_eng_pic_10.webp" type="image/webp">
+                              <img src="img/eng_pics/eng_pic_10.jpg" alt="Pre-Wedding 10" loading="lazy">
+                            </picture>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_11.jpg">
+                    <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_11.jpg" loading="lazy">
                         <div class="image-box">
-                                <img src="img/eng_pics/eng_pic_11.jpg" alt="Pre-Wedding 11"/>
+                            <picture>
+                              <source srcset="img/eng_pics/webp_eng_pic_11.webp" type="image/webp">
+                              <img src="img/eng_pics/eng_pic_11.jpg" alt="Pre-Wedding 11" loading="lazy">
+                            </picture>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_12.jpg">
                         <div class="image-box">
-                                <img src="img/eng_pics/eng_pic_12.jpg" alt="Pre-Wedding 12"/>
+                            <picture>
+                              <source srcset="img/eng_pics/webp_eng_pic_12.webp" type="image/webp">
+                              <img src="img/eng_pics/eng_pic_12.jpg" alt="Pre-Wedding 12" loading="lazy">
+                            </picture>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_13.jpg">
                         <div class="image-box">
-                                <img src="img/eng_pics/eng_pic_13.jpg" alt="Pre-Wedding 13"/>
+                            <picture>
+                              <source srcset="img/eng_pics/webp_eng_pic_13.webp" type="image/webp">
+                              <img src="img/eng_pics/eng_pic_13.jpg" alt="Pre-Wedding 13" loading="lazy">
+                            </picture>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_14.jpg">
                         <div class="image-box">
-                                <img src="img/eng_pics/eng_pic_14.jpg" alt="Pre-Wedding 14"/>
+                            <picture>
+                              <source srcset="img/eng_pics/webp_eng_pic_14.webp" type="image/webp">
+                              <img src="img/eng_pics/eng_pic_14.jpg" alt="Pre-Wedding 14" loading="lazy">
+                            </picture>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_15.jpg">
                         <div class="image-box">
-                                <img src="img/eng_pics/eng_pic_15.jpg" alt="Pre-Wedding 15"/>
+                            <picture>
+                              <source srcset="img/eng_pics/webp_eng_pic_15.webp" type="image/webp">
+                              <img src="img/eng_pics/eng_pic_15.jpg" alt="Pre-Wedding 15" loading="lazy">
+                            </picture>
                         </div>
                     </a>
                 </div>
                 <div class="carousel-item">
                     <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_16.jpg">
                         <div class="image-box">
-                                <img src="img/eng_pics/eng_pic_16.jpg" alt="Pre-Wedding 16"/>
+                            <picture>
+                              <source srcset="img/eng_pics/webp_eng_pic_16.webp" type="image/webp">
+                              <img src="img/eng_pics/eng_pic_16.jpg" alt="Pre-Wedding 16" loading="lazy">
+                            </picture>
                         </div>
                     </a>
-                </div>                
+                </div>    
             </div>
             </div>
             <button class="carousel-arrow right" aria-label="Next">
@@ -692,7 +716,7 @@ document.addEventListener("DOMContentLoaded", function () {
       track.appendChild(clone);
     });
 
-    const scrollSpeed = 2;
+    const scrollSpeed = window.innerWidth <= 768 ? 4 : 2;
     const scrollStep = 420;
     let pauseUntil = 0;
 
@@ -726,19 +750,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // Pause on interaction
     ['wheel', 'touchstart', 'mousedown'].forEach(evt => {
       wrapper.addEventListener(evt, () => {
-        pauseUntil = Date.now() + 3000;
+        pauseUntil = Date.now() + 1000;
       }, { passive: true });
     });
 
     // Manual arrows
     leftArrow.addEventListener("click", () => {
       wrapper.scrollLeft -= scrollStep;
-      pauseUntil = Date.now() + 3000;
+      pauseUntil = Date.now() + 2000;
     });
 
     rightArrow.addEventListener("click", () => {
       wrapper.scrollLeft += scrollStep;
-      pauseUntil = Date.now() + 3000;
+      pauseUntil = Date.now() + 2000;
     });
   });
 });
