@@ -191,7 +191,34 @@
 }
 
 
+@media only screen and (max-width: 767px) {
+  .carousel-item {
+    width: 90vw;
+    height: auto !important;
+    margin: 0 auto;
+  }
 
+  .carousel-item .image-box {
+    width: 100%;
+    height: auto !important;
+  }
+
+  .carousel-item .image-box img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover;
+  }
+
+  .carousel-track {
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .carousel-wrapper {
+    padding: 10px 0;
+  }
+}
 
 
 
