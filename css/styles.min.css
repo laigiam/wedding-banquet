@@ -192,7 +192,6 @@
 
 
 
-
 /* ⬅️➡️ Navigation arrows */
 .carousel-arrow {
   position: absolute;
@@ -251,60 +250,6 @@
 .countdown-rsvp {
     margin-top: 10px;
     display: inline-block;
-}
-
-.countdown-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px; /* spacing between image and RSVP button */
-  margin-top: 20px;
-}
-
-.countdown-image-box {
-  position: relative;
-  display: block;
-}
-
-.countdown-bg {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  opacity: 0.7;
-}
-
-.countdown-text {
-  position: absolute;
-  bottom: 40%;
-  left: 0;
-  width: 100%;
-  padding: 10px 0;
-  color: white;
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-  background: rgba(0, 0, 0, 0.3); /* optional: adds slight overlay at bottom */
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-
-.rsvp-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #00c8f8;
-  color: white;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 768px) {
-  .countdown-bg {
-    width: 150px;
-  }
 }
 
 /* Caption spacing */
@@ -864,6 +809,36 @@
   border-radius: 10px;
 }
 
+@media (max-width: 767px) {
+  .rsvp-flex-wrap {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  .rsvp-image-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .rsvp-slideshow-wrapper {
+    width: 75%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .rsvp-slide {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+  }
+}
+
+
 /* Slide images cropped to fill square */
 .rsvp-slide {
   width: 100%;
@@ -964,4 +939,132 @@
   font-size: 15px;
   color: #3d4351;
   font-weight: 500;
+}
+
+.countdown-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* spacing between image and RSVP button */
+  margin-top: 20px;
+}
+
+
+.countdown-image-box {
+  position: relative;
+  display: block;
+}
+
+.countdown-bg {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  opacity: 0.7;
+}
+
+.countdown-text {
+  position: absolute;
+  bottom: 40%;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3); /* optional: adds slight overlay at bottom */
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.countdown-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.countdown-box-small {
+  width: 75%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+
+.countdown-box-small img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.countdown-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.countdown-rsvp-spacing {
+  margin-top: 20px;
+}
+
+.event-subsection {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.event-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #3d4351;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.event-duration {
+  font-size: 15px;
+  color: rgba(28, 54, 83, 0.65);
+  margin-bottom: 15px;
+}
+
+.event-time-table {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 6px 16px;
+  max-width: 460px;
+  margin: 0 auto 12px auto;
+  font-size: 15px;
+  color: rgba(28, 54, 83, 0.85);
+  text-align: left;
+}
+
+.event-seating-note {
+  font-size: 15px;
+  color: rgba(28, 54, 83, 0.6);
+  margin-top: 10px;
+  max-width: 460px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+.event-subsection + .event-subsection {
+  margin-top: 40px;
 }
