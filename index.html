@@ -710,74 +710,7 @@
 </script>
 
 <!--Scroll Animation-->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelectorAll(".carousel-container").forEach((carousel, index) => {
-    const wrapper = carousel.querySelector(".carousel-wrapper");
-    const track = carousel.querySelector(".carousel-track");
-    const leftArrow = carousel.querySelector(".carousel-arrow.left");
-    const rightArrow = carousel.querySelector(".carousel-arrow.right");
 
-    const isReverse = carousel.classList.contains("reverse-carousel");
-
-    // Clone items for infinite loop
-    const items = [...track.children];
-    items.forEach(item => {
-      const clone = item.cloneNode(true);
-      track.appendChild(clone);
-    });
-
-    const scrollSpeed = window.innerWidth <= 768 ? 4 : 2;
-    const scrollStep = 420;
-    let pauseUntil = 0;
-
-    function autoScroll() {
-      const now = Date.now();
-      if (now > pauseUntil) {
-        wrapper.scrollLeft += isReverse ? -scrollSpeed : scrollSpeed;
-      }
-
-      if (!isReverse && wrapper.scrollLeft >= track.scrollWidth / 2) {
-        wrapper.style.scrollBehavior = 'auto';
-        wrapper.scrollLeft = 0;
-        requestAnimationFrame(() => {
-          wrapper.style.scrollBehavior = 'smooth';
-        });
-      }
-
-      if (isReverse && wrapper.scrollLeft <= 0) {
-        wrapper.style.scrollBehavior = 'auto';
-        wrapper.scrollLeft = track.scrollWidth / 2;
-        requestAnimationFrame(() => {
-          wrapper.style.scrollBehavior = 'smooth';
-        });
-      }
-
-      requestAnimationFrame(autoScroll);
-    }
-
-    autoScroll();
-
-    // Pause on interaction
-    ['wheel', 'touchstart', 'mousedown'].forEach(evt => {
-      wrapper.addEventListener(evt, () => {
-        pauseUntil = Date.now() + 1000;
-      }, { passive: true });
-    });
-
-    // Manual arrows
-    leftArrow.addEventListener("click", () => {
-      wrapper.scrollLeft -= scrollStep;
-      pauseUntil = Date.now() + 2000;
-    });
-
-    rightArrow.addEventListener("click", () => {
-      wrapper.scrollLeft += scrollStep;
-      pauseUntil = Date.now() + 2000;
-    });
-  });
-});
-</script>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
