@@ -1068,3 +1068,30 @@
 .event-subsection + .event-subsection {
   margin-top: 40px;
 }
+
+
+@media (max-width: 767px) {
+  .carousel-item {
+    height: 240px; /* ✅ Set desired uniform height */
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-item .image-box {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-item .image-box img {
+    height: 100%;
+    width: auto;            /* ✅ Keep original aspect ratio */
+    object-fit: contain;    /* ✅ Prevent cropping */
+    max-width: 100%;
+    display: block;
+  }
+}
