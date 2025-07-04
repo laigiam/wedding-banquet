@@ -277,7 +277,9 @@
         <div class="carousel-item">
           <a class="fancybox" rel="group" href="img/eng_pics/eng_pic_1.jpg">
             <div class="image-box">
+              <picture>
                 <img src="img/eng_pics/webp/eng_pic_1.webp" alt="Pre-Wedding 1">
+              </picture>
             </div>
           </a>
         </div>
@@ -711,6 +713,7 @@
 
 <!--Scroll Animation-->
 <script>
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll(".carousel-container").forEach((carousel, index) => {
     const wrapper = carousel.querySelector(".carousel-wrapper");
@@ -726,7 +729,7 @@ document.addEventListener("DOMContentLoaded", function () {
       track.appendChild(clone);
     });
 
-    const scrollSpeed = window.innerWidth <= 768 ? 4 : 2;
+    const scrollSpeed = isMobile ? 40 : 2;
     const scrollStep = 420;
     let pauseUntil = 0;
 
@@ -760,7 +763,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Pause on interaction
     ['wheel', 'touchstart', 'mousedown'].forEach(evt => {
       wrapper.addEventListener(evt, () => {
-        pauseUntil = Date.now() + 1000;
+        pauseUntil = Date.now() + 2000;
       }, { passive: true });
     });
 
@@ -1134,6 +1137,40 @@ function showNextImage() {
 </script>
 
 
+<script>
+window.addEventListener('load', () => {
+  const items = document.querySelectorAll('.carousel-item img');
+
+  items.forEach((img) => {
+    if (img.complete) {
+      resizeCarouselItem(img);
+    } else {
+      img.addEventListener('load', () => resizeCarouselItem(img));
+    }
+  });
+
+  function resizeCarouselItem(img) {
+    const naturalWidth = img.naturalWidth;
+    const naturalHeight = img.naturalHeight;
+
+    // Use 280px on desktop, 180px on mobile
+    const targetHeight = window.innerWidth <= 767 ? 225 : 280;
+    const scaledWidth = (targetHeight / naturalHeight) * naturalWidth;
+
+    img.style.height = `${targetHeight}px`;
+    img.style.width = 'auto';
+    img.parentElement.style.width = `${scaledWidth}px`;
+
+    // Optional: also apply to carousel-item for consistent box size
+    const item = img.closest('.carousel-item');
+    if (item) {
+      item.style.height = `${targetHeight}px`;
+      item.style.width = `${scaledWidth}px`;
+    }
+  }
+});
+
+</script>
 
 
 </body>

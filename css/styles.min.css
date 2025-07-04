@@ -232,42 +232,20 @@
 
 
 @media only screen and (max-width: 767px) {
-  .carousel-item {
-    flex: 0 0 auto;
-    max-height: 280px;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
+  .carousel-wrapper {
+    margin-bottom: 12px !important; /* reduce space below top carousel */
   }
 
-  .carousel-item .image-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .second-carousel-wrapper {
+    margin-top: 12px !important; /* reduce space above bottom carousel */
   }
 
-  .carousel-item .image-box img {
-    max-height: 280px;
-    max-width: 90vw;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    border-radius: 12px;
-    display: block;
-  }
-
-  .carousel-track {
-    display: flex;
-    gap: 12px !important;
-    align-items: flex-start;
-    padding: 0 10px;
+  /* Optional: also control section spacing globally */
+  .carousel-section {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
   }
 }
-
-
 
 
 
@@ -292,6 +270,7 @@
     margin-top: 10px;
     display: inline-block;
 }
+
 
 /* Caption spacing */
 .caption-space {
@@ -1060,6 +1039,25 @@
   font-family: "Open Sans", sans-serif;
 }
 
+
+@media only screen and (max-width: 767px){
+  .countdown-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+  }
+}
 
 .countdown-rsvp-spacing {
   margin-top: 20px;
