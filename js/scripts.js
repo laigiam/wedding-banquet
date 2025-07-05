@@ -209,7 +209,7 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
-    $('#rsvp-form').on('submit', function (e) {
+    $('#rsvp-form').on('submit', function (e) ){
         e.preventDefault();
         var data = $(this).serialize();
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
@@ -234,24 +234,45 @@ $(document).ready(function () {
         }
     });
 
-});
 
 /********************** Extras **********************/
 
 // Google map
 function initMap() {
-    var location = {lat: 1.293605582979568, lng: 103.85890804154393};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: location,
-        scrollwheel: false
+  // CONRAD map
+  const conrad = { lat: 1.2936, lng: 103.8572 };
+  const conradMap = document.getElementById("map-canvas");
+  if (conradMap) {
+    const map1 = new google.maps.Map(conradMap, {
+      zoom: 16,
+      center: conrad,
     });
+    new google.maps.Marker({
+      position: conrad,
+      map: map1,
+      title: "Conrad Singapore Marina Bay",
+    });
+  }
 
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map
-    });
+  // LIVING HOPE map — delay rendering to ensure layout is ready
+  setTimeout(() => {
+    const churchMap = document.getElementById("church-map-canvas");
+    if (churchMap) {
+      const church = { lat: 1.3519126996513025, lng: 103.96053388185229 };
+      const map2 = new google.maps.Map(churchMap, {
+        zoom: 16,
+        center: church,
+      });
+      new google.maps.Marker({
+        position: church,
+        map: map2,
+        title: "Living Hope Methodist Church",
+      });
+    }
+  }, 100); // 100–200ms delay usually works
 }
+
+
 
 function initBBSRMap() {
     var la_fiesta = {lat: 1.293605582979568, lng: 103.85890804154393};
@@ -266,6 +287,7 @@ function initBBSRMap() {
         map: map
     });
 }
+
 
 // alert_markup
 function alert_markup(alert_type, msg) {
