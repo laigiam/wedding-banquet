@@ -758,22 +758,30 @@
           <div class="faq-answer">Please RSVP by 27<sup>th</sup> July 2025</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">Will food be served? <em>(church only question)</em></div>
-          <div class="faq-answer">Yes, there will be a lunch reception after the ceremony</div>
-        </div>
-        <div class="faq-item">
           <div class="faq-question">Can I bring a guest/plus-one?</div>
           <div class="faq-answer">Yes! please let us know so we can make arrangements accordingly</div>
         </div>
         <div class="faq-item">
-          <div class="faq-question">I'm planning to drive, where can I park?</div>
-          <div class="faq-answer"><p>You may park at the <a href="https://maps.app.goo.gl/Y62Avcqk8d7aV2gaA" target="_blank" style="text-decoration: underline;">multi-story carpark</a> behind the church.</p></div>
+          <div class="faq-question">How do I get there by public transport?</div>
+          <div class="faq-answer"><ul class="modal-list">
+            <li>The nearest station is <strong>Promenade MRT Station (CC4/DT15)</strong>. Use Exit C and walk through Millenial Walk</li>
+            <li>Click <a href="#" onclick="openConradDirections(); return false;" class="faq-link" style="text-decoration: underline;">here</a> for a guide of the sheltered walkways around the area</li>
+          </ul></div>
         </div>
+        <div class="faq-item">
+          <div class="faq-question">I'm planning to drive, where do I park?</div>
+          <div class="faq-answer"><ul class="modal-list">
+            <li>Click for a <a href="https://www.youtube.com/watch?v=7QRJVHJbIFA" target="_blank" style="text-decoration: underline;">video guide</a> to park at the hotel</li>
+            <li>Complimentary coupons are available upon request</li>
+            <li>Alternative parking at Suntec City (linked to Conrad via Level 1/Basement)</li>
+          </ul></div>
+        </div>
+
+
       </div>
     </div>
   </div>
 </section>
-
 
 
 <footer>
@@ -1309,6 +1317,27 @@ window.addEventListener('load', () => {
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ-gH92kcZK374pTaVbV7jqsPF43HPeFE&callback=initMap"></script>
 
+<!--Conrad Directions Pop-Up-->
+<script>
+  function openConradDirections() {
+    const modal = document.getElementById("conrad-directions-modal");
+    modal.classList.add("show");
+  }
+
+  function closeConradDirections() {
+    const modal = document.getElementById("conrad-directions-modal");
+    modal.classList.remove("show");
+  }
+
+  // Close modal when clicking outside the content box
+  window.addEventListener("click", function (event) {
+    const modal = document.getElementById("conrad-directions-modal");
+    if (event.target === modal) {
+      closeConradDirections();
+    }
+  });
+</script>
+
 
 
 
@@ -1363,6 +1392,19 @@ window.addEventListener('load', () => {
   }
 }
 </style>
+
+
+
+<!-- Modal HTML -->
+<div id="conrad-directions-modal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeConradDirections()">&times;</span>
+    <img src="img/Sheltered Walkway Guide.jpg" alt="Sheltered Walkway Guide" class="modal-image"/>
+  </div>
+</div>
+
+
+
 
 
 </body>
