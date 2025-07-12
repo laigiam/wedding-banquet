@@ -111,8 +111,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <p>We will be honoured to have you at our holy matrimony!<br>
-                  We will be honoured to have you at our wedding!</p>
+                <p>We will be honoured to have you at our wedding!</p>
             </div>
         </div>
     </div>
@@ -153,7 +152,7 @@
 
       <div class="event-time-table">
         <div><strong>10:45am – 11:00am</strong></div>
-        <div>Registration</div>
+        <div>E-Registration + Doors Open</div>
         <div><strong>11:00am – 12:30pm</strong></div>
         <div>Holy Matrimony</div>
         <div><strong>12:30pm onwards</strong></div>
@@ -263,7 +262,7 @@
       <div class="timeline-item">
         <div class="timeline-content left">
           <h4><strong><em>On that stormy day...he proposed</em></strong></h4>
-          <p>Dark, rainy, just us on a remote island. No photos—only Simon’s beautiful words and a memory beyond pictures (now captured in his drawing).</p>
+          <p>Dark, rainy, just us on the remote <em>Pulau Hantu</em> of Singapore. No photos—only Simon’s beautiful words and a memory beyond pictures (now captured in his drawing).</p>
         </div>
         <div class="timeline-image right" >
           <a class="fancybox" rel="group" href="img/Proposal-1.jpg">
@@ -316,7 +315,7 @@
             <div class="image-box">
             <img src="img/Proposal-1.jpg" alt="Proposal Sunset" class="fade-right">
             </div>
-      <p>Dark, rainy, just us on a remote island. No photos—only Simon’s beautiful words etched in memory (replayed in his sketch)</p>
+      <p>Dark, rainy, just us on Singapore's remote <em>Pulau Hantu</em>. No photos then... only Simon’s beautiful words etched in memory (replayed in his sketch)</p>
     </div>
   </div>
 
@@ -338,7 +337,7 @@
             <div class="image-box">
             <img src="img/Proposal-3.jpg" alt="Proposal Sunset" class="fade-right">
             </div>
-      <p>Returned to the island with better weather—just the two of us again—blessed with a stunning sunset to relive it all </p>
+      <p>Returned to the island! Blessed with better weather and a stunning sunset to relive it all :)</p>
     </div>
   </div>
 </section>
@@ -712,12 +711,23 @@
             </div>
 
             <div class="col-md-12 col-12">
+              <div class="form-input-group with-info-icon">
+                <i class="fa fa-pencil"></i>
+                <input type="text" name="special-arrangements" placeholder="Special Arrangements">
+                <i class="fa fa-info-circle input-info-icon" onclick="openSpecialInfo()" title="More info"></i>
+              </div>
+            </div>
+
+
+
+            <div class="col-md-12 col-12">
               <div class="form-input-group">
                 <i class="fa fa-heart"></i>
                 <input type="text" name="wishes" placeholder="Well wishes for us! (optional)">
               </div>
             </div>
 
+            
             <div class="col-md-6 col-12">
               <button class="btn-fill rsvp-btn" type="submit" name="response" value="accept">Joyfully Accept</button>
             </div>
@@ -762,6 +772,10 @@
           <div class="faq-answer">Yes! please let us know so we can make arrangements accordingly</div>
         </div>
         <div class="faq-item">
+          <div class="faq-question">How do I register for young children?</div>
+          <div class="faq-answer">Please contact us if you are bringing children under 12</div>
+        </div>
+        <div class="faq-item">
           <div class="faq-question">How do I get there by public transport?</div>
           <div class="faq-answer"><ul class="modal-list">
             <li>The nearest station is <strong>Promenade MRT Station (CC4/DT15)</strong>. Use Exit C and walk through Millenial Walk</li>
@@ -773,7 +787,6 @@
           <div class="faq-answer"><ul class="modal-list">
             <li>Click for a <a href="https://www.youtube.com/watch?v=7QRJVHJbIFA" target="_blank" style="text-decoration: underline;">video guide</a> to park at the hotel</li>
             <li>Complimentary coupons are available upon request</li>
-            <li>Alternative parking at Suntec City (linked to Conrad via Level 1/Basement)</li>
           </ul></div>
         </div>
 
@@ -1328,7 +1341,7 @@ window.addEventListener('load', () => {
     const modal = document.getElementById("conrad-directions-modal");
     modal.classList.remove("show");
   }
-
+  
   // Close modal when clicking outside the content box
   window.addEventListener("click", function (event) {
     const modal = document.getElementById("conrad-directions-modal");
@@ -1339,7 +1352,26 @@ window.addEventListener('load', () => {
 </script>
 
 
+<!--Conrad Directions Pop-Up-->
+<script>
+  function openSpecialInfo() {
+    const modal = document.getElementById("special-info-modal");
+    modal.classList.add("show");
+  }
 
+  function closeSpecialInfo() {
+    const modal = document.getElementById("special-info-modal");
+    modal.classList.remove("show");
+  }
+  
+  // Close modal when clicking outside the content box
+  window.addEventListener("click", function (event) {
+    const modal = document.getElementById("special-info-modal");
+    if (event.target === modal) {
+      closeSpecialInfo();
+    }
+  });
+</script>
 
 <style>
 @media (max-width: 767px) {
@@ -1403,6 +1435,18 @@ window.addEventListener('load', () => {
   </div>
 </div>
 
+<!-- Modal HTML -->
+<div id="special-info-modal" class="modal-overlay">
+  <div class="modal-content">
+    <span class="modal-close" onclick="closeSpecialInfo()">&times;</span>
+    <h3 class="modal-title">Special Arrangements</h3>
+    <p class="modal-description">
+      <br>If you have any special requests — such as mobility assistance, 
+      arrangements for young children, or other needs, please let us know here.<br><br>
+      e.g. wheelchair, baby chair, stroller space
+    </p>
+  </div>
+</div>
 
 
 
